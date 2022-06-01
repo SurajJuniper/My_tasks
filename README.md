@@ -1,5 +1,9 @@
 #Task1- automation to check the connected interfaces
 
+    
+    
+
+
 import paramiko
 
 session = paramiko.SSHClient() #created obj for SSH client
@@ -13,6 +17,3 @@ print("Identifying the interfaces connected to Rack1-DataSw ")
 stdin, stdout, stderr = session.exec_command("lldpcli show neighbors | grep -i nodem5") #running commands
     
 print(stdout.read().decode()) # printing  the results
-    
-    
-
